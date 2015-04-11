@@ -1,6 +1,3 @@
-import pytest
-
-
 def equilibrium(array):
     """ A zero-indexed array A consisting of N integers is given. An equilibrium index
         of this array is any integer P such that 0 ≤ P < N and the sum of elements of
@@ -78,3 +75,6 @@ assert(equilibrium([-1, 3, -4, 5, 1, -6, 2, 1]) == [1, 3, 7])
 assert(equilibrium([-1, 3]) == -1)
 assert(equilibrium([-1, 1, -1, 0, 0]) == [0, 1, 2])
 assert(equilibrium([2, -1, 1, -1, 0, 0]) == -1)
+assert(equilibrium([]) == -1)
+assert(equilibrium([1]) == [0])
+assert(equilibrium([-2, 147, 483, 147, 483, 647]) == -1)
