@@ -2,12 +2,14 @@ def solution(linked_list):
     """
         Returns the lenght of a linked_list.
     """
-    current_element = linked_list[0]
-    lenght = 0
-    while(current_element != -1):
-        lenght += 1
-        current_element = linked_list[current_element]
+    new_list, copy = {}, linked_list[:]
+    while(len(copy) > 0):
+        if copy[0] != -1:
+            new_list[copy[0]] = copy[0]
 
-    return lenght
+        del copy[0]
 
-print(solution([1, 4, -1, 3, 2]))
+    return len(new_list)
+
+linked = [1, 4, -1, 3, 2]
+assert(solution(linked) == 4)
